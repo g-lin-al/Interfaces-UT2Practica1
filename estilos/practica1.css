@@ -16,10 +16,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
+    --color-negro: black;
+    --color-blanco: white;
     --head-color-1: lightgreen;
     --head-color-2: yellow;
-    --head-2-bg: #68C0B2;
-    --nav-hover: #68C0B2;
+    --color-fondos: #68C0B2;
+    --color-fondos: #68C0B2;
+    --bg-sidebar: lightgrey;
 }
 
 * {
@@ -37,7 +40,7 @@
 }
 
 .contenedor_main2 {
-    grid-area: main1;
+    grid-area: main2;
 }
 
 .sidebar {
@@ -55,15 +58,17 @@ footer {
                          "aside main1"
                          "main2 main2"
                          "footer footer";
-    width: 100vw;
+    grid-template-columns: 1fr 5fr;
+    width: 100%;
 }
 
+
+/* HEADER */
+
+
 header {
-    display: flex;
     width: 100%;
     height: 150px;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .eslogan {
@@ -71,7 +76,7 @@ header {
     height: 30%;
     flex-shrink: 0;
     font-weight: bold;
-    color: black;
+    color: var(--color-negro);
     background-image: linear-gradient(to right, var(--head-color-1), var(--head-color-2));
     text-align: center;
 }
@@ -80,7 +85,7 @@ header {
     display: flex;
     width: 100%;
     height: 70%;
-    background-color: var(--head-2-bg);
+    background-color: var(--color-fondos);
     justify-content: space-around;
     align-items: center;
 }
@@ -91,6 +96,7 @@ header {
 }
 
 nav {
+    width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -102,26 +108,85 @@ nav > div {
 
 nav > div:hover {
     display: flex;
-    color: white;
+    color: var(--color-blanco);
     text-decoration: underline;
 }
 
 .idioma img {
-    width: 1.5rem;
+    width: 1rem;
+    height: 1rem;
 }
 
 .menu_idiomas {
     width: 100%;
     border-radius: 5px;
-    border: 5px solid var(--nav-hover);
+    border: 5px solid var(--color-fondos);
     text-align: center;
+}
+
+.opcion_idioma {
+    display: flex;
+    height: 2rem;
+    background-color: var(--color-blanco);
+    justify-content: center;
 }
 
 .opcion_idioma a {
     text-decoration: none;
-    color: black;
+    color: var(--color-negro);
 }
 
 .opcion_idioma:hover {
-    background-color: var(--nav-hover);
+    background-color: var(--color-fondos);
+}
+
+
+/* SIDEBAR */
+
+
+.sidebar {
+    width: 100%;
+    color: var(--color-negro);
+    background-color: var(--bg-sidebar);
+    text-align: center;
+}
+
+.sidebar li:hover {
+    text-decoration: underline;
+}
+
+.sidebar h3 {
+    margin: 15px;
+}
+
+.sidebar li {
+    margin: 10px;
+}
+
+
+/* MAIN */
+
+
+.contenedor_main1_1 {
+    display: flex;
+    margin: 15px 0 30px 15px;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+.contenedor_promocion {
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor_promocion button {
+    height: 2rem;
+    padding: 0 15px;
+    color: var(--color-negro);
+    background-color: var(--color-fondos);
+    border-radius: 30px;
+}
+
+video {
+    border: 5px solid var(--color-fondos);
 }

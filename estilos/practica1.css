@@ -1,0 +1,127 @@
+/* BORRAR ANTES DE ENTREGAR
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --head-color-1: lightgreen;
+    --head-color-2: yellow;
+    --head-2-bg: #68C0B2;
+    --nav-hover: #68C0B2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Funnel Sans";
+}
+
+.header {
+    grid-area: header;
+}
+
+.contenedor_main1 {
+    grid-area: main1;
+}
+
+.contenedor_main2 {
+    grid-area: main1;
+}
+
+.sidebar {
+    grid-area: aside;
+    width: 15%;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.contenedor_grid {
+    display: grid;
+    grid-template-areas: "header header"
+                         "aside main1"
+                         "main2 main2"
+                         "footer footer";
+    width: 100vw;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.eslogan {
+    width: 100%;
+    height: 30%;
+    flex-shrink: 0;
+    font-weight: bold;
+    color: black;
+    background-image: linear-gradient(to right, var(--head-color-1), var(--head-color-2));
+    text-align: center;
+}
+
+.contenedor_header {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    background-color: var(--head-2-bg);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contenedor_header > img {
+    height: 90%;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav > div {
+    display: flex;
+}
+
+nav > div:hover {
+    display: flex;
+    color: white;
+    text-decoration: underline;
+}
+
+.idioma img {
+    width: 1.5rem;
+}
+
+.menu_idiomas {
+    width: 100%;
+    border-radius: 5px;
+    border: 5px solid var(--nav-hover);
+    text-align: center;
+}
+
+.opcion_idioma a {
+    text-decoration: none;
+    color: black;
+}
+
+.opcion_idioma:hover {
+    background-color: var(--nav-hover);
+}

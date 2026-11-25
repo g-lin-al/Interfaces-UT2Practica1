@@ -18,10 +18,11 @@
 :root {
     --color-negro: black;
     --color-blanco: white;
+    --color-azul: rgb(135, 135, 255);
     --head-color-1: lightgreen;
     --head-color-2: yellow;
     --color-fondos: #68C0B2;
-    --bg-sidebar: lightgrey;
+    --color-fondos-claro: lightgrey;
 }
 
 * {
@@ -114,7 +115,8 @@ nav > div:hover {
 }
 
 .idioma {
-    
+    position: relative;
+    padding: 30px;
 }
 
 .idioma:hover .menu_idiomas {
@@ -128,8 +130,8 @@ nav > div:hover {
 
 .menu_idiomas {
     position: absolute;
-    right: 100px;
-    top: 100px;
+    right: 0px;
+    top: 75px;
     display: none;
     width: 125px;
     border-radius: 5px;
@@ -161,7 +163,7 @@ nav > div:hover {
 .sidebar {
     width: 100%;
     color: var(--color-negro);
-    background-color: var(--bg-sidebar);
+    background-color: var(--color-fondos-claro);
     text-align: center;
 }
 
@@ -203,4 +205,72 @@ nav > div:hover {
 
 video {
     border: 5px solid var(--color-fondos);
+    border-radius: 15px;
+}
+
+.contenedor_promocion h2 {
+    font-size: 2rem;
+    margin: 30px;
+}
+
+.contenedor_promocion p {
+    font-size: 1.5rem;
+    margin: 50px;
+}
+
+.contenedor_promocion button {
+    width: 30%;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin: 30px;
+}
+
+.contenedor_main1_2 {
+    width: 90%;
+    margin: 30px auto;
+    padding: 15px;
+    background-color: var(--color-fondos-claro);
+    border-radius: 15px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab {
+    padding: 10px;
+    margin: 10px;
+}
+
+.tab:hover {
+    border-bottom: 2px solid var(--color-azul);
+}
+
+.active {
+    border-bottom: 2px solid var(--color-azul);
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item_formulario {
+    width: 20%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.item_formulario input, .item_formulario select {
+    width: 100%;
+    height: 2rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.boton_formulario {
+    width: 100px;
+    background-color: var(--color-fondos);
+    border-radius: 25px;
 }

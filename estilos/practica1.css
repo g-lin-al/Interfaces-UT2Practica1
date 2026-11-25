@@ -21,7 +21,6 @@
     --head-color-1: lightgreen;
     --head-color-2: yellow;
     --color-fondos: #68C0B2;
-    --color-fondos: #68C0B2;
     --bg-sidebar: lightgrey;
 }
 
@@ -68,17 +67,19 @@ footer {
 
 header {
     width: 100%;
-    height: 150px;
+    height: 100px;
 }
 
 .eslogan {
+    display: flex;
     width: 100%;
     height: 30%;
     flex-shrink: 0;
     font-weight: bold;
     color: var(--color-negro);
     background-image: linear-gradient(to right, var(--head-color-1), var(--head-color-2));
-    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor_header {
@@ -112,13 +113,25 @@ nav > div:hover {
     text-decoration: underline;
 }
 
+.idioma {
+    
+}
+
+.idioma:hover .menu_idiomas {
+    display: block;
+}
+
 .idioma img {
     width: 1rem;
     height: 1rem;
 }
 
 .menu_idiomas {
-    width: 100%;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    display: none;
+    width: 125px;
     border-radius: 5px;
     border: 5px solid var(--color-fondos);
     text-align: center;
@@ -129,9 +142,10 @@ nav > div:hover {
     height: 2rem;
     background-color: var(--color-blanco);
     justify-content: center;
+    align-items: center;
 }
 
-.opcion_idioma a {
+.idioma a {
     text-decoration: none;
     color: var(--color-negro);
 }
@@ -169,7 +183,7 @@ nav > div:hover {
 
 .contenedor_main1_1 {
     display: flex;
-    margin: 15px 0 30px 15px;
+    margin: 15px;
     background-color: var(--color-blanco);
     color: var(--color-negro);
 }
